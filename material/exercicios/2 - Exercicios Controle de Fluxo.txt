@@ -1,5 +1,5 @@
-
 Escreva uma classe chamada Exercicios em um novo pacote chamado parte2 dentro de fundamentos e para cada exercício abaixo crie um método na classe Exercicios com o nome no formato "exercicio_X" onde X é o número do exercício. Crie um método "public static void main" que será usado para testar os demais métodos da classe.
+
 
 1) Escreva um programa que recebe um valor inteiro e informa se ele é positivo, negativo ou zero.
 
