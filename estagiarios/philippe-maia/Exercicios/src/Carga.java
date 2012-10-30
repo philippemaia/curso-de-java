@@ -1,3 +1,5 @@
+//Exercicio1 da ultima lista de exercicios
+
 public class Carga {
 	
 	private double peso;
