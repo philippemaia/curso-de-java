@@ -1,0 +1,79 @@
+As questões devem ser respondidas sem o uso do compilador.
+
+Questão 1)
+
+Quais linhas compilariam sem gerar erro? Qual o motivo para cada uma das outras gerar erro?
+
+1) float f = 1.3;     (X) 
+2) char c = "a";      ( ) o char so recebe aspas simples
+3) byte b = 257;      ( ) o byte tem fazer o casting para tirar o erro
+4) boolean b = null;  ( ) o boolean so pode receber true ou false(padrão)
+5) int i = 10;        (X)
+ 
+Questão 2)
+
+Quais palavras abaixo são reservadas no Java?
+
+1) if      (X)
+2) then    (X) 
+3) goto    ( )
+4) while   (X)
+5) select  ( ) 
+6) case    (X)
+
+Questão 3)
+
+Quais os identificadores válidos?
+
+1) 2variable       ( )
+2) variable2       (X)
+3) _whatavariable  (X)
+4) _3_             (X)   
+5) $anothervar     (X)
+6) #myvar          ( )
+
+Questão 4)
+
+class TestaOperadores {
+  static boolean teste(String s, boolean b) {
+    System.out.print(s + (b ? "T" : "F"));
+    return b;
+  }
+  public static void main(String[] args) {
+    teste("A", teste("B",false) || teste("C",true) || teste("D",false));
+  }
+}
+
+Qual o resultado ao tentar compilar e rodar o código acima? (responder sem compilar!)
+
+a. 	Escreve: ATBFCT         (X)  
+b. 	Escreve: ATBFCTDF       ( ) 
+c. 	Escreve: BFCTAT         ( )     
+d. 	Escreve: BTCTDFAT       ( )
+e. 	Erro de execução        ( ) 
+f. 	Erro de compilação      ( )
+g. 	Nenhuma das anteriores  ( )
+
+Questão 5)
+
+class TestaBooleanos {
+  public static void main(String[] args) {
+    boolean b = true;
+    if (b = false) {
+    	System.out.print("A");
+    } else if (b) {
+    	System.out.print("B");
+    } else {
+    	System.out.print("C");
+    }
+  }
+}
+
+Qual o resultado ao tentar compilar e rodar o código acima?
+
+a. 	Escreve: A              ( ) 
+b. 	Escreve: B              ( )
+c. 	Escreve: C              (X)
+d. 	Erro de execução        ( )
+e. 	Erro de compilação      ( )
+f. 	Nenhuma das anteriores  ( ) 

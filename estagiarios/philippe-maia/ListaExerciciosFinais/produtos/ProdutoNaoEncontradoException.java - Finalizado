@@ -1,7 +1,5 @@
 package produtos;
 
-import java.util.TreeSet;
-
 /*
  *  Crie um pacote produtos. Dentro dele crie a classe Produto
  *  com os atributos codigo (Integer), descricao (String) e preco (BigDecimal).
@@ -16,27 +14,10 @@ import java.util.TreeSet;
  *  Crie um método main para testar tudo que foi feito.
  * 
  */
-public class BuscaProdutos {
 
-	public Integer obterProduto(Integer codigo) {
-		return codigo;
-	}
+public class ProdutoNaoEncontradoException extends Exception{
 
-	public void exibirProdutos() {
-
-	}
-
-	public void cargaInicial() {
-
-		TreeSet<Produto> produtos = new TreeSet<Produto>();
-		//produtos.add(e);
-		
-		
-	}
-
-	public static void main(String[] args) {
-		BuscaProdutos bp = new BuscaProdutos();
-		bp.cargaInicial();
-		
-	}
+    public ProdutoNaoEncontradoException(String message){
+	super(message);
+    }
 }

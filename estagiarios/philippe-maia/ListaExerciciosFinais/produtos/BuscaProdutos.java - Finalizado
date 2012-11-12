@@ -1,0 +1,71 @@
+package produtos;
+
+import java.math.BigDecimal;
+import java.util.TreeSet;
+
+/*
+ *  Crie um pacote produtos. Dentro dele crie a classe Produto
+ *  com os atributos codigo (Integer), descricao (String) e preco (BigDecimal).
+ *  Crie para ela os métodos equals e hashCode (baseados no codigo),
+ *  e faça com que implemente Comparable<Produto> baseando o compareTo na descrição.
+ *  Sobrescreva também o método toString.
+ *  Crie uma classe BuscaProdutos com um atributo TreeSet de produtos e com os
+ *  métodos obterProduto(Integer codigo), exibirProdutos() e cargaInicial().
+ *  O método carga inicial será chamado para inicializar o treeset com alguns produtos.
+ *  Crie uma exceção chamada ProdutoNaoEncontradoException que será lançada 
+ *  quando obterProduto não encontrar o produto referente ao código informado.
+ *  Crie um método main para testar tudo que foi feito.
+ * 
+ */
+public class BuscaProdutos {
+
+	private TreeSet<Produto> produtos;
+	
+	@Override
+	public String toString() {
+		return "BuscaProdutos [produtos=" + produtos + "]";
+	}
+
+	public Produto obterProduto(Integer codigo) throws ProdutoNaoEncontradoException {
+		for(Produto produto : produtos){
+			if(produto.getCodigo().equals(codigo)){
+				System.out.println(produto);
+				return produto;
+			}
+		}		
+				
+		throw new ProdutoNaoEncontradoException("O produto de codigo " + codigo + " nao foi encontrado");
+	}
+
+	public void cargaInicial() {
+		produtos = new TreeSet<Produto>();
+		produtos.add(new Produto(1, "sardinha", new BigDecimal(2.50)));
+		produtos.add(new Produto(2, "biscoito", new BigDecimal(1.50)));
+		produtos.add(new Produto(3, "nescau", new BigDecimal(4.50)));
+		produtos.add(new Produto(4, "cocacola", new BigDecimal(5.00)));
+		produtos.add(new Produto(5, "chocolate", new BigDecimal(3.90)));
+		produtos.add(new Produto(6, "cerveja", new BigDecimal(4.00)));
+	}
+
+	public void exibirProdutos() {
+
+		for (Produto prod : produtos) {
+			System.out.println(prod);
+		}
+	}
+
+	public static void main(String[] args) {
+		Boolean busca = true;
+		BuscaProdutos bp = new BuscaProdutos();
+
+		try {
+			bp.cargaInicial();
+			bp.obterProduto(3);			
+			bp.obterProduto(7);
+
+		} catch (ProdutoNaoEncontradoException e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}

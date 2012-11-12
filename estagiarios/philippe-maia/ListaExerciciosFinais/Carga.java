@@ -1,15 +1,17 @@
-//Exercicio1 da ultima lista de exercicios
-
+//Exercicio1 da lista dos Exercicios Finais
+//Finalizado substitui o anterior
 public class Carga {
 	
 	private double peso;
 	
 	public Carga(double peso) {
-		super();
-		this.peso = peso;
+		setPeso(peso);
 	}
 
 	public void setPeso(double peso) {
+		if(peso<0){		
+		    throw new IllegalArgumentException("Não é possivel uma pessoa ter o peso negativo!");
+		}
 		this.peso = peso;
 	}
 	
@@ -19,14 +21,10 @@ public class Carga {
 	
 	
 	public static void main(String[] args) {
-		Carga c = new Carga(-2.);
+		
 		try {
-			if(c.getPeso()>0){
-				System.out.print(c.getPeso());
-			}else{
-				throw new IllegalArgumentException("Não é possivel uma pessoa ter o peso negativo");
-			}
-			
+			Carga c = new Carga(-40.);
+			System.out.println(c.getPeso());
 		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 		}

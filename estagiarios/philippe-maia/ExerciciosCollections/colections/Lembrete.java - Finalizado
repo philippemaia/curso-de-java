@@ -1,4 +1,4 @@
-//lista de exercicios collections exercicio2
+//lista de exercicios collections exercicio2 Finalizado
 
 package colections;
 
@@ -14,6 +14,7 @@ import java.util.Map;
  *  demonstrando a estrutura criada.
  * 
  */
+
 public class Lembrete {
 	
 	private List<String> tarefas;
@@ -31,25 +32,40 @@ public class Lembrete {
 		List<String> valores = new ArrayList<String>();	
 		List<String> valores2 = new ArrayList<String>();
 		List<String> valores3 = new ArrayList<String>();
+		List<String> valores4 = new ArrayList<String>();
+		List<String> valores5 = new ArrayList<String>();
+		List<String> valores6 = new ArrayList<String>();
+		List<String> valores7 = new ArrayList<String>();
 		Map<String, List<String>> mapa = new HashMap<String, List<String>>();
 		
 		valores.add("estudar");
 		valores.add("trabalhar");
 		valores.add("ler");
 		
+		valores2.add("namorar");
+		valores2.add("trabalhar");
+		
 		valores3.add("trabalhar");
 		valores3.add("malhar");
 		
-		valores2.add("namorar");
-		valores2.add("jogar");
+		valores4.add("trabalhar");
+		valores4.add("praticar shiatsu");
+		
+		valores5.add("trabalhar");
+		valores5.add("jogar");
+		
+		valores6.add("namorar");
+		valores6.add("jogar video-game com a namorada");
+		
+		valores7.add("descançar");
 				
 		mapa.put("Segunda-Feira", valores);
-		mapa.put("Terca-feira", valores3);
-		mapa.put("Quarta-Feira",valores);
-		mapa.put("Quinta-Feira", valores3);
-		mapa.put("Sexta-Feira", valores);
-		mapa.put("Sabado", valores2);
-		mapa.put("Domingo", valores2);
+		mapa.put("Terca-feira", valores2);
+		mapa.put("Quarta-Feira",valores3);
+		mapa.put("Quinta-Feira", valores4);
+		mapa.put("Sexta-Feira", valores5);
+		mapa.put("Sabado", valores6);
+		mapa.put("Domingo", valores7);
 		
 		System.out.println(mapa);
 		
