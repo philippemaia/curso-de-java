@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class Exercicio4URL {
 
-	//Exercicio 4 da ultima lista
+	//Exercicio 4 da ultima lista Finalizado
 	public static void main(String[] args) throws IOException {
 	
 	URL url;

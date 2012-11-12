@@ -24,7 +24,7 @@ public class Exercicio4URL {
 			List<String> valores = headers.get(key);
 			System.out.print("Chave: " + key);
 			for(String valor : valores) {
-				System.out.println(valores);
+				System.out.println(valor);
 			}
 		}
 		
