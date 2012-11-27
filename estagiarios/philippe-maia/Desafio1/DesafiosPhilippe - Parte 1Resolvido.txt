@@ -1,10 +1,11 @@
 As questões devem ser respondidas sem o uso do compilador.
+//finalizado substitui o anterior
 
 Questão 1)
 
 Quais linhas compilariam sem gerar erro? Qual o motivo para cada uma das outras gerar erro?
 
-1) float f = 1.3;     (X) 
+1) float f = 1.3;     ( ) não compila pq o correto seria float f = (float) 1.3;
 2) char c = "a";      ( ) o char so recebe aspas simples
 3) byte b = 257;      ( ) o byte tem fazer o casting para tirar o erro
 4) boolean b = null;  ( ) o boolean so pode receber true ou false(padrão)
@@ -15,8 +16,8 @@ Questão 2)
 Quais palavras abaixo são reservadas no Java?
 
 1) if      (X)
-2) then    (X) 
-3) goto    ( )
+2) then    ( ) 
+3) goto    (X)
 4) while   (X)
 5) select  ( ) 
 6) case    (X)
@@ -46,9 +47,9 @@ class TestaOperadores {
 
 Qual o resultado ao tentar compilar e rodar o código acima? (responder sem compilar!)
 
-a. 	Escreve: ATBFCT         (X)  
+a. 	Escreve: ATBFCT         ( )  
 b. 	Escreve: ATBFCTDF       ( ) 
-c. 	Escreve: BFCTAT         ( )     
+c. 	Escreve: BFCTAT         (X)     
 d. 	Escreve: BTCTDFAT       ( )
 e. 	Erro de execução        ( ) 
 f. 	Erro de compilação      ( )

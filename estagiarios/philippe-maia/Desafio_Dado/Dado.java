@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Desafio do Dado finalizado substitui o anterior
+
 public class Dado {
 
 	private final static Integer tamanho = 6;
 	private Integer numeroLado;
-	private Integer contAcertos = 0;
+	private Integer contadorDeAcertos = 0;
 
 	public Dado(Integer numeroLado) {
 		this.numeroLado = numeroLado;
@@ -22,16 +24,16 @@ public class Dado {
 		this.numeroLado = numeroLado;
 	}
 
-	public Integer getContAcertos() {
-		return contAcertos;
+	public Integer getcontadorDeAcertos() {
+		return contadorDeAcertos;
 	}
 
-	public void setContAcertos(Integer contAcertos) {
-		this.contAcertos = contAcertos;
+	public void setcontadorDeAcertos(Integer contadorDeAcertos) {
+		this.contadorDeAcertos = contadorDeAcertos;
 	}
 
-	public void somatorioAcertos() {
-		this.contAcertos++;
+	public void incrementarAcertos() {
+		this.contadorDeAcertos++;
 	}
 
 	public static void main(String[] args) {
@@ -49,14 +51,14 @@ public class Dado {
 			Integer numeroSorteado = (int) (Math.random() * tamanho + 1);
 			for (Dado dados : lados) {
 				if (dados.getNumeroLado() == numeroSorteado) {
-					dados.somatorioAcertos();
+					dados.incrementarAcertos();
 				}
 			}
 		}
 
 		for (Dado dados : lados) {
 			System.out.println("O numero: " + dados.getNumeroLado()
-					+ " foi sorteado " + dados.getContAcertos() + " vezes");
+					+ " foi sorteado " + dados.getcontadorDeAcertos() + " vezes");
 		}
 
 	}
